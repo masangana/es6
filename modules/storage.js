@@ -12,16 +12,13 @@ export function renderBook() {
   BookInfo.innerHTML = '';
   getmylibrary.forEach((element, index) => {
     const cardBody = document.createElement('tr');
-
     const title = document.createElement('td');
     title.classList.add('ms-4', 'fs-5');
     const spanelm = document.createElement('span');
     spanelm.classList.add('ms-3');
     spanelm.innerText = `"${element.title}" by ${element.author}`;
     title.appendChild(spanelm);
-
     cardBody.appendChild(title);
-
     const deletebtn = document.createElement('td');
     deletebtn.classList.add('d-flex');
     const deleteCard = document.createElement('button');
@@ -34,7 +31,6 @@ export function renderBook() {
     });
     deletebtn.appendChild(deleteCard);
     cardBody.appendChild(deletebtn);
-
     BookInfo.appendChild(cardBody);
   });
 
