@@ -1,4 +1,4 @@
-// import { DateTime } from './luxon.js'
+/* eslint-disable no-undef */
 
 const dateDisplay = document.getElementById('dateTime');
 const setTime = () => {
