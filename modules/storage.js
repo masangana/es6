@@ -8,7 +8,7 @@ const addBookButton = document.getElementById('add-book');
 let BL = '';
 export const getmylibrary = JSON.parse(localStorage.getItem('mesLivres1'));
 if (getmylibrary === null) {
-  localStorage.mesLivres1 = JSON.stringify([]);  
+  localStorage.mesLivres1 = JSON.stringify([]);
 }
 
 export function renderBook() {
