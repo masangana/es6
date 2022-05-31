@@ -1,7 +1,11 @@
-/* eslint-disable no-undef */
+// import { DateTime } from './luxon.js'
 
-const time = document.getElementById('dateTime');
-const { DateTime } = luxon;
-const dt = DateTime.now();
+const dateDisplay = document.getElementById('dateTime');
+const setTime = () => {
+  const { DateTime } = luxon;
+  const now = DateTime.now();
+  const date = now.toLocaleString(DateTime.DATETIME_MED_WITH_SECONDS);
+  dateDisplay.innerHTML = date;
+};
 
-setTimeout(time.innerHTML = dt.toLocaleString(DateTime.DATETIME_MED), 1000);
+setInterval(setTime, 1000);
